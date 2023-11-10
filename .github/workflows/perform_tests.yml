@@ -25,6 +25,8 @@ jobs:
         run: mvn test
   ReleaseMyApp:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - 
         uses: actions/checkout@v4
@@ -37,4 +39,12 @@ jobs:
           architecture: x64
       - run: mvn package
       - run: ls -la target/
-  
+      - uses: ncipollo/release-action@v1.13.0
+        with:
+          artifacts: "target/my-ecommerce-0.1.jar"
+          body: my first release
+          name: My pre release for ecommerce application
+          
+        
+        
+        
