@@ -1,0 +1,10 @@
+name: My frist ci cd job 🚀
+on: [push]
+jobs:
+  PerfomCodeAnalysis:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I going to perfomr some code analysis"
+      - run: echo "seam it works"
+      - run: ls -la 
+      - run: pdw
