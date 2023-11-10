@@ -7,4 +7,4 @@ jobs:
       - run: echo "I going to perfomr some code analysis"
       - run: echo "seam it works"
       - run: ls -la 
-      - run: pdw
+      - run: pwd
